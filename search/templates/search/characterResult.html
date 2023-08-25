@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Character Search Results</title>
+</head>
+<body>
+    <h1>Character Search Results</h1>
+
+    {% if character %}
+    <p>Character Info:</p>
+    <ul>
+        <li>Character Name: {{ character.rows.0.characterName }}</li>
+        <li>Level: {{ character.rows.0.level }}</li>
+        <li>Job: {{ character.rows.0.jobName }} - {{ character.rows.0.jobGrowName }}</li>
+        <li>Fame: {{ character.rows.0.fame }}</li>
+    </ul>
+    {% else %}
+    <p>No character found with the given name.</p>
+    {% endif %}
+
+    <p><a href="{% url 'search:index' %}">Back to Search</a></p>
+</body>
+</html>
