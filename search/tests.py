@@ -1,10 +1,6 @@
 from django.test import TestCase
 from django.urls import reverse
 from unittest.mock import patch
-from decouple import config
-
-from .forms import CharacterSearchForm  # Make sure to import your form
-from .views import characterResultView
 
 
 class CharacterResultViewTest(TestCase):
