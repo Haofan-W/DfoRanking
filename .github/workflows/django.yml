@@ -30,6 +30,7 @@ jobs:
         black dfoRanking
     - name: Run Tests
       run: |
+        echo "API_KEY=$API_KEY" >> .env
         coverage run manage.py test
     - name: Coveralls GitHub Action
       uses: coverallsapp/github-action@v2
