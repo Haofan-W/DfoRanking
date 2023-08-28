@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "fameRanking.apps.FamerankingConfig",
     "search.apps.SearchConfig",
     "django.contrib.admin",
     "django.contrib.auth",
